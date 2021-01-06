@@ -1,0 +1,124 @@
+:root { /* permet de modifier ici la couleur et ca la modifie partout*/
+    --color-default : #222;
+    --color-inverse : #eee;
+    --dark-color : #333;
+}
+
+
+
+/* *******************************  Styles Généraux ******************************* */
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    color : var(--color-default);
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+
+/* ******************************* banniere, footer ******************************* */
+
+.banner, .footer {
+    padding-left: calc((100% - 1200px) / 2 );
+    padding-right: calc((100% - 1200px) / 2 );
+    background-color: rgb(214, 214, 119);
+    color : var(--color-inverse);
+}
+
+.banner a,
+.footer a {
+    color : var(--color-inverse);
+    text-decoration: none;
+}
+
+.banner {
+        display: grid;
+    grid-template-rows: auto;
+    column-gap: 1em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+.site-logo {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1.3em;
+}
+
+.site-description {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+}
+
+.banner-nav {
+    grid-column: 2;
+    grid-row: 1 span / 2;
+    justify-self: end;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+.banner-nav a {
+    margin: 0 25px;
+    padding-bottom: 5px;
+    border-bottom: 5px solid transparent;
+}
+
+
+.banner-nav a:hover,
+.banner-nav a:focus,
+.banner-nav a:active,
+.banner-nav a.is-current {
+    border-bottom: 5px solid white;
+    color: white;
+} 
+
+.footer {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.footer > * {
+    margin: 0;
+} /* >enfants direct >*tous les enfants direct*/
+
+#gotop {
+    width: 1em;
+    height: 1.2em;
+    line-height: 1.2em;
+    position: absolute;
+    z-index: 5000;
+    top: -1.2em;
+    left: calc(50% - 0.5em);
+    background-color: var(--dark-color);
+    border-radius: 5px 5px 0 0;
+    font-size: 2em;
+}
+
+
+
+
+
