@@ -78,6 +78,9 @@ video {
     align-self: center;
     text-transform: uppercase;
 }
+.banner-nav img {
+    height: 50px;
+}
 
 .banner-nav a {
     margin: 0 25px;
